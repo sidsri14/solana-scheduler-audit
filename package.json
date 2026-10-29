@@ -1,0 +1,34 @@
+{
+  "name": "solana-validator-scheduler-audit",
+  "version": "1.0.0",
+  "description": "Empirical transaction ordering and leader scheduler analysis harness across Solana validator client forks (Agave, Jito, Firedancer)",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "start": "tsx src/index.ts --dry-run",
+    "analyze": "tsx src/index.ts --dry-run --slots 5",
+    "report": "tsx src/generate-report.ts"
+  },
+  "keywords": [
+    "solana",
+    "validator",
+    "transaction-ordering",
+    "block-scheduler",
+    "mev",
+    "jito",
+    "agave"
+  ],
+  "author": "Siddharth Srivastava <sidsri1502@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.95.8",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
